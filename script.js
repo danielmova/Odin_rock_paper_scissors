@@ -4,6 +4,18 @@ let humanScore = 0;
 
 let computerScore = 0;
 
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    console.log(button.id);
+  });
+});
+
+
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
@@ -11,7 +23,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
-    promtChoice = prompt("Rock, paper or scissors?", "rock").toLowerCase();
+
 
     for (let i = 0; i < choices.length; i++) {
         if (promtChoice === choices[i]){
@@ -92,5 +104,3 @@ function playGame(){
     return winnerGame;
 
 }
-
-console.log(playGame());
