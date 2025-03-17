@@ -1,0 +1,11 @@
+.playGameContainer{
+    display: block;
+}
+
+.optionsContainer{
+    display: none;
+}
+
+.resoultsContainer{
+    display: none;
+}

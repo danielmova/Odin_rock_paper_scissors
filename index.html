@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <title>Odin Rock Paper Scissors</title>
 </head>
@@ -11,9 +12,9 @@
         <h1 class="titlePage">ODIN SHOWDOWN</h1>
         <h2 class="subtitlePage">Rock Paper Scissors</h2>
     </div>
-    <div class="playGame">
+    <div class="playGameContainer">
         <p class="playGamePara">You will face the god of all "Odin" in the most honorable of duels... 5 rounds, one winner.</p>
-        <button id="payGameBtn">Ready?</button>
+        <button id="payGameBtn" onclick="playGame()">Ready?</button>
     </div>
     <div class="optionsContainer">
         <div class="optionsIntro">
@@ -21,18 +22,21 @@
         </div>
         <div class="optionsCards">
             <div class="rockContainer">
-                <button class="optionSelected" id="rockBtn">Select Rock</button>
+                <button class="optionSelected" id="rock" onclick="playRound(this.id)">Select Rock</button>
             </div>
             <div class="paperContainer">
-                <button class="optionSelected" id="paperBtn">Select Paper</button>
+                <button class="optionSelected" id="paper" onclick="playRound(this.id)">Select Paper</button>
             </div>
             <div class="scissorsContainer">
-                <button class="optionSelected" id="scissorsBtn">Select Scissors</button>
+                <button class="optionSelected" id="scissors" onclick="playRound(this.id)">Select Scissors</button>
             </div>
         </div>
     </div>
-    <div class="Resoults">
+    <div class="resoultsContainer">
+        <div class="resoults">
 
+        </div>
+        <button id="reestart" onclick="playGame()">Play Again?</button>
     </div>
 </body>
 </html>
