@@ -1,5 +1,12 @@
 const choices = ["rock", "paper", "scissors"];
 
+const resoultsDiv = document.getElementById("resoults");
+
+console.log(resoultsDiv);
+
+let resoultsPara = document.createElement("p");
+
+
 let humanScore = 0;
 
 let computerScore = 0;
@@ -51,7 +58,8 @@ function playRound(button_id) {
         }
     }
 
-    console.log(winnerRound);
+    //resoultsPara.innerText = winnerRound;
+    //resoultsDiv.append(resoultsPara);
     rounds ++;
 
     if (rounds == 5){
