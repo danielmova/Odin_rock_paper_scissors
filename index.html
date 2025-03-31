@@ -9,25 +9,29 @@
 </head>
 <body>
     <div class="titleContainer">
+        <img id="odinPixelArt" src="https://placehold.co/200">
         <h1 class="titlePage">ODIN SHOWDOWN</h1>
         <h2 class="subtitlePage">Rock Paper Scissors</h2>
     </div>
     <div class="playGameContainer">
         <p class="playGamePara">You will face the god of all "Odin" in the most honorable of duels... 5 rounds, one winner.</p>
-        <button id="payGameBtn" onclick="playGame()">Ready?</button>
+        <button id="playGameBtn" onclick="playGame()">Ready?</button>
     </div>
     <div class="optionsContainer">
         <div class="optionsIntro">
-            <p class="optionsPara">Chose your weapon...</p>
+            <p class="optionsPara">Round 1 \nChose your weapon...</p>
         </div>
         <div class="optionsCards">
             <div class="rockContainer">
+                <img src="https://placehold.co/100">
                 <button class="optionSelected" id="rock" onclick="playRound(this.id)">Select Rock</button>
             </div>
             <div class="paperContainer">
+                <img src="https://placehold.co/100">
                 <button class="optionSelected" id="paper" onclick="playRound(this.id)">Select Paper</button>
             </div>
             <div class="scissorsContainer">
+                <img src="https://placehold.co/100">
                 <button class="optionSelected" id="scissors" onclick="playRound(this.id)">Select Scissors</button>
             </div>
         </div>
