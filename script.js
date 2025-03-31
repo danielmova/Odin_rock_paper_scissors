@@ -1,11 +1,8 @@
 const choices = ["rock", "paper", "scissors"];
 
-const resoultsDiv = document.getElementById("resoults");
+const resoultsDiv = document.querySelector(".resoults");
 
-console.log(resoultsDiv);
-
-let resoultsPara = document.createElement("p");
-
+const resoultsPara = document.createElement("p");
 
 let humanScore = 0;
 
@@ -58,8 +55,8 @@ function playRound(button_id) {
         }
     }
 
-    //resoultsPara.innerText = winnerRound;
-    //resoultsDiv.append(resoultsPara);
+    resoultsPara.innerText = winnerRound;
+    resoultsDiv.append(resoultsPara);
     rounds ++;
 
     if (rounds == 5){
@@ -79,8 +76,11 @@ function playRound(button_id) {
         }
         
         document.querySelector(".optionsContainer").style.display = "none";
-        document.querySelector(".resoultsContainer").style.display = "block";
+        document.querySelector("#reestart").style.display = "block";
         console.log(winnerGame);
+
+        resoultsPara.innerText = winnerGame;
+        resoultsDiv.append(resoultsPara);
     }
 }
 
@@ -93,6 +93,10 @@ function playGame(){
     computerScore = 0;
     rounds = 0;
 
+    resoultsPara.innerText = "";
+
     document.querySelector(".playGameContainer").style.display = "none";
     document.querySelector(".optionsContainer").style.display = "block";
+    document.querySelector(".resoultsContainer").style.display = "block";
+    document.querySelector("#reestart").style.display = "none";
 }
