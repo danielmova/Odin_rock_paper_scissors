@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Odin Rock Paper Scissors</title>
+    <title>Odin Showdown</title>
 </head>
 <body>
     <div class="titleContainer">
         <img id="odinPixelArt" src="https://placehold.co/200">
         <h1 class="titlePage">ODIN SHOWDOWN</h1>
-        <h2 class="subtitlePage">Rock Paper Scissors</h2>
     </div>
     <div class="playGameContainer">
-        <p class="playGamePara">You will face the god of all "Odin" in the most honorable of duels... 5 rounds, one winner.</p>
+        <p class="playGamePara">You will face the god of all "Odin" in the most honorable of duels... <br>5 rounds, one winner.</p>
         <button id="playGameBtn" onclick="playGame()">Ready?</button>
     </div>
     <div class="optionsContainer">
@@ -22,25 +24,19 @@
             <p class="optionsPara">Round 1 \nChose your weapon...</p>
         </div>
         <div class="optionsCards">
-            <div class="rockContainer">
+            <div class="cards">
                 <img src="https://placehold.co/100">
                 <button class="optionSelected" id="rock" onclick="playRound(this.id)">Select Rock</button>
             </div>
-            <div class="paperContainer">
+            <div class="cards">
                 <img src="https://placehold.co/100">
                 <button class="optionSelected" id="paper" onclick="playRound(this.id)">Select Paper</button>
             </div>
-            <div class="scissorsContainer">
+            <div class="cards">
                 <img src="https://placehold.co/100">
                 <button class="optionSelected" id="scissors" onclick="playRound(this.id)">Select Scissors</button>
             </div>
         </div>
-    </div>
-    <div class="resoultsContainer">
-        <div class="resoults">
-
-        </div>
-        <button id="reestart" onclick="playGame()">Play Again?</button>
     </div>
 </body>
 </html>

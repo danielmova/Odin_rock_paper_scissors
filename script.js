@@ -56,8 +56,9 @@ function playRound(button_id) {
             humanScore++;
         }
     }
-
     rounds ++;
+    console.log(`Round: ${rounds} Winner: ${winnerRound}`);
+
     resoultsPara.innerText = winnerRound;
     roundPara.innerText = `Round ${rounds + 1} \nChose your weapon...`;
     
@@ -81,7 +82,7 @@ function playRound(button_id) {
         }
         
         playGameBtnJs.innerText = "Play again?";
-        playGameBtnJs.style.display = "block";
+        playGameBtnJs.style.display = "flex";
 
         document.querySelector(".optionsContainer").style.display = "none";
         console.log(winnerGame);
@@ -103,7 +104,6 @@ function playGame(){
     roundPara.innerText = "Round 1 \n Chose your weapon...";
 
     playGameBtnJs.style.display = "none";
-    document.querySelector(".optionsContainer").style.display = "block";
-    document.querySelector(".resoultsContainer").style.display = "block";
-    document.querySelector("#reestart").style.display = "none";
+    document.querySelector(".optionsContainer").style.display = "flex";
+    document.querySelector(".resoultsContainer").style.display = "flex";
 }
