@@ -1,3 +1,12 @@
+/*html { 
+    background: url(https://c.tenor.com/SOIKID3WrNUAAAAC/tenor.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+
+
 body{
     margin: 20px;
     display: flex;
@@ -8,6 +17,7 @@ body{
 
 .playGameContainer{
     display: block;
+    justify-content: center;
 }
 
 .optionsContainer{
@@ -33,6 +43,11 @@ body{
     flex-direction: column;
 }
 
+.playGamePara{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
 .optionsContainer{
     flex-direction: column;
     align-items: center;
@@ -52,9 +67,10 @@ body{
 
 button {
     padding: 15px 5px 15px 5px;
+    font-family:'VT323', Courier, monospace;
     text-align: center;
+    font-size: 20px;
     margin: 10px;
-    font-size: 14px;
     border: 0;
     box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff36 ;
     cursor: pointer;

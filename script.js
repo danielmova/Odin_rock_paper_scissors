@@ -24,35 +24,35 @@ function playRound(button_id) {
     let winnerRound = "";
     
     if (humanChoice === computerChoice) {
-        winnerRound = `Tie. ${humanChoice} vs ${computerChoice}`;
+        winnerRound = `Tie!\n ${humanChoice} vs ${computerChoice}`;
     }
     else if (humanChoice === "rock") {
         if (computerChoice === "paper") {
-            winnerRound = `Computer wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `Odin Win this round!!!\n${humanChoice} vs ${computerChoice}`;
             computerScore++;
         } 
         else if (computerChoice === "scissors") {
-            winnerRound = `Human wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `You Win this round...\n${humanChoice} vs ${computerChoice}`;
             humanScore++;
         }
     }
     else if (humanChoice === "paper") {
         if (computerChoice === "scissors") {
-            winnerRound = `Computer wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `Odin Win this round!!!\n${humanChoice} vs ${computerChoice}`;
             computerScore++;
         }
         else if (computerChoice === "rock") {
-            winnerRound = `Human wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `You Win this round...\n${humanChoice} vs ${computerChoice}`;
             humanScore++;
         }
     }
     else if (humanChoice === "scissors") {
         if (computerChoice === "rock") {
-            winnerRound = `Computer wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `Odin Win this round!!!\n${humanChoice} vs ${computerChoice}`;
             computerScore++;
         }
         else if (computerChoice === "paper") {
-            winnerRound = `Human wins. ${humanChoice} vs ${computerChoice}`;
+            winnerRound = `You Win this round...\n${humanChoice} vs ${computerChoice}`;
             humanScore++;
         }
     }
@@ -70,19 +70,19 @@ function playRound(button_id) {
         let winnerGame = "";
 
         if (humanScore == computerScore){
-            winnerGame = `Tie!. Human: ${humanScore} vs Computer: ${computerScore}`;
+            winnerGame = `Tie!\n You: ${humanScore} vs Odin: ${computerScore}\nYou are a formidable opponent...`;
         }
     
         else if (humanScore < computerScore){
-            winnerGame = `Computer wins the game. Human: ${humanScore} vs Computer: ${computerScore}`;
+            winnerGame = `You Lose!!!\n You: ${humanScore} vs Odin: ${computerScore}\nOdin sees everything...`;
         }
     
         else if (humanScore > computerScore){
-            winnerGame = `Human wins the game. Human: ${humanScore} vs Computer: ${computerScore}`;
+            winnerGame = `Congratulations!!!\n You: ${humanScore} vs Odin: ${computerScore}\nYou Win!!!\n...\nFor now...`;
         }
         
+        playGameBtnJs.style.display = "block";
         playGameBtnJs.innerText = "Play again?";
-        playGameBtnJs.style.display = "flex";
 
         document.querySelector(".optionsContainer").style.display = "none";
         console.log(winnerGame);
